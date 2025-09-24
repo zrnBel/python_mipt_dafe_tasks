@@ -7,6 +7,7 @@ def get_sum_of_prime_divisors(num: int) -> int:
                 sum_of_divisors += i
                 while num % i == 0:
                     num //= i
+                    
                 break
-            
+
     return sum_of_divisors
