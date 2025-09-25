@@ -1,12 +1,9 @@
-# def is_palindrome(num: int) -> bool:
-#    num_reversed = 0
-#    num_origin = num
-#
-#    return num_origin == num_reversed
-#
 def is_palindrome(num: int) -> bool:
-    if str(num)[::] == str(num)[::-1]:
-        return True
+    num_reversed = 0
+    num_origin = num
 
-    else:
-        return False
+    while num > 0:
+        num_reversed = num_reversed * 10 + num % 10
+        num //= 10
+
+    return num_origin == num_reversed
