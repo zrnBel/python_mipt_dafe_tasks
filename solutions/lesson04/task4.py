@@ -4,5 +4,5 @@ def move_zeros_to_end(nums: list[int]) -> list[int]:
         if nums[i] != 0:
             nums[i], nums[pos] = nums[pos], nums[i]
             pos += 1
-            
+
     return pos
