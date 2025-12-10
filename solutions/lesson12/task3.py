@@ -1,5 +1,6 @@
 import sys
-from typing import TextIO, Optional, Self
+from typing import Optional, Self, TextIO
+
 
 class FileOut:
     path_to_file: str
@@ -15,7 +16,7 @@ class FileOut:
         self.file = None
 
     def __enter__(self) -> Self:
-        self.file = open(self.path_to_file, 'w')
+        self.file = open(self.path_to_file, "w")
         self.stdout = sys.stdout
         sys.stdout = self.file
 

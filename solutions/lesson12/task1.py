@@ -3,9 +3,9 @@ from typing import Any, Generator, Iterable
 
 def chunked(iterable: Iterable, size: int) -> Generator[tuple[Any], None, None]:
     buffer = []
-    
+
     for elem in iterable:
-        buffer.append(elem) 
+        buffer.append(elem)
 
         if len(buffer) == size:
             yield tuple(buffer)
