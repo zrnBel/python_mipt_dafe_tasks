@@ -18,6 +18,6 @@ def adaptive_filter(
 
     A = np.diag(diag_A)
 
-    Vj_H = np.linalg.matrix_transpose(Vj).conj()
+    Vj_H = Vj.conj().T
 
     return Vs - Vj @ np.linalg.inv(np.eye(len(diag_A)) + Vj_H @ Vj @ A) @ (Vj_H @ Vs)
