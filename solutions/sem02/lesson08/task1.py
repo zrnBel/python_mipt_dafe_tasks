@@ -19,7 +19,7 @@ def calculate_modulated_func(
     modulation: Callable[[np.ndarray], np.ndarray], fc: float
 ) -> Callable[[np.ndarray], np.ndarray]:
     if modulation is None:
-        modulation = lambda x: 1
+        lambda t: np.sin(2 * np.pi * fc * t)
 
     return lambda t: np.sin(2 * np.pi * fc * t) * modulation(t)
 
